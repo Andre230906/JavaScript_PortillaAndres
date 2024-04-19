@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Rectángulo</title>
+</head>
+
+<body>
+    <h1>Calculadora de Rectángulo</h1>
+
+    <button onclick="obtenerDatosRectangulo()">Calcular Área y Perímetro</button>
+
+    <script>
+        function obtenerDatosRectangulo() {
+            const anchura = prompt("Ingresa la anchura del rectángulo:");
+            const altura = prompt("Ingresa la altura del rectángulo:");
+
+            const rectangulo = new Rectangulo(parseInt(anchura), parseInt(altura));
+            const area = rectangulo.calcularArea();
+            const perimetro = rectangulo.calcularPerimetro();
+
+            alert(`El área del rectángulo es: ${area}\nEl perímetro del rectángulo es: ${perimetro}`);
+        }
+
+        class Rectangulo {
+            constructor(anchura, altura) {
+                this.anchura = anchura;
+                this.altura = altura;
+            }
+
+            calcularArea() {
+                return this.anchura * this.altura;
+            }
+
+            calcularPerimetro() {
+                return 2 * (this.anchura + this.altura);
+            }
+        }
+    </script>
+</body>
+
+</html>

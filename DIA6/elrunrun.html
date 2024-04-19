@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Detalles de Vehículos</title>
+</head>
+
+<body>
+    <h1>Detalles de Vehículos</h1>
+
+    <button onclick="mostrarSiguienteVehiculo()">Mostrar Siguiente Vehículo</button>
+    <button onclick="buscarVehiculo()">Buscar Vehículo por Marca</button>
+    <button onclick="registrarVehiculo()">Registrar Nuevo Vehículo</button>
+
+    <script>
+        let vehiculos = [];
+
+        class Vehiculo {
+            constructor(marca, modelo, año) {
+                this.marca = marca;
+                this.modelo = modelo;
+                this.año = año;
+            }
+
+            mostrarDetalles() {
+                return `Marca: ${this.marca}\nModelo: ${this.modelo}\nAño: ${this.año}`;
+            }
+        }
+
+        class Coche extends Vehiculo {
+            constructor(marca, modelo, año, numPuertas) {
+                super(marca, modelo, año);
+                this.numPuertas = numPuertas;
+            }
+
+            mostrarDetalles() {
+                return `${super.mostrarDetalles()}\nNúmero de puertas: ${this.numPuertas}`;
+            }
+        }
+
+        function mostrarSiguienteVehiculo() {
+            if (vehiculos.length === 0) {
+                alert("No hay vehículos registrados.");
+            } else {
+                const vehiculoActual = vehiculos.shift();
+                alert(vehiculoActual.mostrarDetalles());
+            }
+        }
+
+        function buscarVehiculo() {
+            const marcaBuscada = prompt("Ingresa la marca del vehículo que deseas buscar:");
+            const vehiculoEncontrado = vehiculos.find(vehiculo => vehiculo.marca === marcaBuscada);
+
+            if (vehiculoEncontrado) {
+                alert(vehiculoEncontrado.mostrarDetalles());
+            } else {
+                alert("No se encontró ningún vehículo con la marca especificada.");
+            }
+        }
+
+        function registrarVehiculo() {
+            const marca = prompt("Ingresa la marca del vehículo:");
+            const modelo = prompt("Ingresa el modelo del vehículo:");
+            const año = prompt("Ingresa el año del vehículo:");
+            const numPuertas = prompt("Ingresa el número de puertas del vehículo (si es un coche):");
+
+            const nuevoVehiculo = new Vehiculo(marca, modelo, año);
+
+            if (numPuertas) {
+                const coche = new Coche(marca, modelo, año, numPuertas);
+                vehiculos.push(coche);
+            } else {
+                vehiculos.push(nuevoVehiculo);
+            }
+
+            alert("Vehículo registrado exitosamente.");
+        }
+    </script>
+</body>
+
+</html>
