@@ -16,3 +16,6 @@ function replaceWords(dictionary, sentence) {
                 words[i] = successorToRoot[successor] + word.slice(successor.length);
                 break; // Stop after replacing with the shortest root
             }
+        }
+    }
+}
