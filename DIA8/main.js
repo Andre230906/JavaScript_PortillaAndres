@@ -15,20 +15,33 @@ document.getElementById('apiForm').addEventListener('submit', function(e) {
                 <p><strong>Color de ojos:</strong> ${data.eye_color}</p>
                 <p><strong>Año de nacimiento:</strong> ${data.birth_year}</p>
                 <p><strong>Género:</strong> ${data.gender}</p>
-                <p><strong>Mundo:</strong> ${data.homeworld}</p>
-                <p><strong>Películas:</strong> ${data.films.join(', ')}</p>
+                <p><strong>Mundo natal:</strong> ${data.homeworld}</p>
+                <p><strong>Películas:</strong></p>
+                <ul id="filmsList"></ul>
                 <p><strong>Especies:</strong> ${data.species.join(', ')}</p>
                 <p><strong>Naves:</strong> ${data.starships.join(', ')}</p>
                 <p><strong>fecha de creacion:</strong> ${data.created}</p>
-                <p><strong>ultima feecha de edicion:</strong> ${data.edited}</p>
+                <p><strong>ultima modificacion:</strong> ${data.edited}</p>
                 <p><strong>URL:</strong> ${data.url}</p>
             `;
 
             document.getElementById('result').innerHTML = template;
+
+            const filmsList = document.getElementById('filmsList');
+            data.films.forEach(film => {
+                fetch(film)
+                    .then(response => response.json())
+                    .then(filmData => {
+                        const filmItem = document.createElement('li');
+                        filmItem.textContent = filmData.title;
+                        filmsList.appendChild(filmItem);
+                    })
+                    .catch(error => console.error('Error al obtener info de la pelí:', error));
+            });
         })
         .catch(error => {
-            console.error('Error al buscar tu personaje:', error);
-            document.getElementById('result').innerHTML = 'Error al buscar tu personajito. Por favor, inténtalo de nuevo.';
+            console.error('Error al hacer search:', error);
+            document.getElementById('result').innerHTML = 'Error al buscar tu personajito. Plis, inténtalo de nuevo.';
         });
 });
 
