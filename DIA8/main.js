@@ -13,3 +13,17 @@ document.getElementById('apiForm').addEventListener('submit', function(e) {
             document.getElementById('result').innerHTML = 'Error al consultar , inténtalo de nuevo.';
         });
 });
+swapi.get('https://swapi.dev/api/planets/').then((resultad) => {
+    console.log(resultado);
+    return resultado.nextPage();
+}).then((resultado) => {
+    console.log(resultado);
+    return resultado.previousPage();
+}).then((resultado) => {
+    console.log(resultado);
+}).catch((err) => {
+    console.log(err);
+});
+getHomeworld().then((result) => {
+    console.log(result);
+});
