@@ -68,3 +68,4 @@ swapi.get('https://swapi.dev/api/planets/').then((resultad) => {
 getHomeworld().then((result) => {
     console.log(result);
 });
+//finisha
