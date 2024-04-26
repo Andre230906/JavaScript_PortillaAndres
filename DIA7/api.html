@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Superhéroes y Villanos</title>
+</head>
+
+<body>
+    <h1>Buscador de Superhéroes y Villanos</h1>
+    <input type="text" id="superhero-id" placeholder="Ingresa el ID del superhéroe o villano">
+    <button onclick="buscarSuperheroe()">Buscar</button>
+    <div id="resultado"></div>
+
+    <script>
+        function buscarSuperheroe() {
+            const id = document.getElementById('superhero-id').value;
+            const url = `https://superheroapi.com/api/${id}`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const imagen = data.image.url;
+                    const nombre = data.name;
+
+                    const resultado = document.getElementById('resultado');
+                    resultado.innerHTML = `
+                        <h2>${nombre}</h2>
+                        <img src="${imagen}" alt="${nombre}">
+                    `;
+                })
+                .catch(error => console.log(error));
+        }
+    </script>
+</body>
+
+</html>

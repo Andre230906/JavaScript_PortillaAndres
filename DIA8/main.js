@@ -30,18 +30,18 @@ document.getElementById('apiForm').addEventListener('submit', function(e) {
 
             document.getElementById('result').innerHTML = template;
 
-            const fetchAndDisplayInfo = (url, listId) => {
-                fetch(url)
-                    .then(response => response.json())
-                    .then(info => {
-                        const infoItem = document.createElement('li');
-                        infoItem.textContent = info.name || info.title;
-                        document.getElementById(listId).appendChild(infoItem);
+            const fetchAndDisplayInfo = (url, listId) => { // esta funcion trabaja con dos parametros
+                fetch(url) // el fetch realiza una solicitud
+                    .then(response => response.json()) // el them lo que hace es transformar la respuesta en un objeto json
+                    .then(info => { // este them procesa la info obtenida de la solicitud
+                        const infoItem = document.createElement('li'); // se almacena el json para que lo transforme a una lista
+                        infoItem.textContent = info.name || info.title; // se agrega el nombre o titulo de la info
+                        document.getElementById(listId).appendChild(infoItem); // se agrega la info a la lista
                     })
-                    .catch(error => console.error('Error al obtener info:', error));
+                    .catch(error => console.error('Error al obtener info:', error)); // si hay un error, se muestra en consola
             };
 
-            fetchAndDisplayInfo(data.homeworld, 'homeworldInfo');
+            fetchAndDisplayInfo(data.homeworld, 'homeworldInfo'); // se llama a la funcion con los parametros de la ur del mundo natal mostrandolo en homeworldinfo
             data.films.forEach(film => fetchAndDisplayInfo(film, 'filmsList'));
             data.species.forEach(species => fetchAndDisplayInfo(species, 'speciesList'));
             data.starships.forEach(starship => fetchAndDisplayInfo(starship, 'starshipsList'));
