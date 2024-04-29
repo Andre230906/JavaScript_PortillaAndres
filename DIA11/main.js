@@ -3,7 +3,8 @@ let lastSearchedCharacter = 1;
 
 function mostrarPersonaje(numero) {
     if (numero >= 650 && numero <= 1025) {
-        document.getElementById('pokemonImg').src = '';
+        document.getElementById('pokemonImg').src = "HddtBOT-copia.jpg"
+
         document.getElementById('pokemonName').textContent = `Trabajando en la animación de este pokemon. Estará disponible pronto.`;
     } else {
         fetch(`https://pokeapi.co/api/v2/pokemon/${numero}`)

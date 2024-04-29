@@ -1,0 +1,110 @@
+body {
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(to bottom, #73bbf6, #ffffff);
+}
+
+.img1 {
+    position: absolute;
+    left: 39vi;
+    top: 5vi;
+}
+
+.gif {
+    position: absolute;
+    top: 16vi;
+    left: 46.5vi;
+    height: 6vi;
+}
+
+.data {
+    position: absolute;
+    font-weight: 600;
+    color: #aaa;
+    top: 23vi;
+    font-size: 1.8vi;
+    right: 54vi;
+    text-align: right;
+    width: 50%;
+}
+
+.name {
+    position: absolute;
+    font-weight: 600;
+    color: #000000;
+    top: 23vi;
+    font-size: 1.8vi;
+    right: 45vi;
+    text-align: right;
+    width: 50%;
+}
+
+.input {
+    position: absolute;
+    width: 13.5vi;
+    padding: 0.7vi;
+    outline: none;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #3a444d;
+    font-size: clamp(8px, 5vw, 1rem);
+    box-shadow: -3px 4px 0 #888, -5px 7px 0 #333;
+    left: 41.5vi;
+    top: 28vi;
+}
+
+.button1 {
+    position: absolute;
+    width: 6vi;
+    padding: 0.5vi;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: clamp(8px, 5vw, 1rem);
+    font-weight: 600;
+    color: white;
+    background-color: #444;
+    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+    top: 33.5vi;
+    left: 42vi;
+}
+
+.button1:active {
+    transform: translateY(4px);
+}
+
+.button2 {
+    position: absolute;
+    width: 6vi;
+    padding: 0.5vi;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: clamp(8px, 5vw, 1rem);
+    font-weight: 600;
+    color: white;
+    background-color: #444;
+    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+    top: 33.5vi;
+    left: 51vi;
+}
+
+.button2:active {
+    transform: translateY(4px);
+}
+
+.clear-input-btn {
+    position: absolute;
+    top: 28.7vi;
+    left: 55vi;
+    right: 5px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-size: 17px;
+    color: #999;
+    width: 0vi;
+}
+
+.clear-input-btn:hover {
+    color: #666;
+}
