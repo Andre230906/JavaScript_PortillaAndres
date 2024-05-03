@@ -444,7 +444,6 @@ function placeCardActions() {
         }
 
     } else {
-        //logic for the other players...
 
         console.log(`Player ${currentPlayer+1} is thinking`);
 
