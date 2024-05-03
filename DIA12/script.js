@@ -1,7 +1,7 @@
 const deck = [];
 const table = [];
 const colors = ["red", "yellow", "green", "blue"];
-const symbols = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "reverse", "p2", "block", "p4", "color"];
+const symbols = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "reverse", "p2", "block", "p4"];
 const jokers = [];
 
 let turn = 7000;
@@ -48,8 +48,7 @@ function convertSymbol(value) {
             return "0";
         case "KING":
             return "reverse";
-        case "QUEEN":
-            return "color";
+
         case "JACK":
             return "p4";
         default:
