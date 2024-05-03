@@ -1,22 +1,68 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego de Cartas UNO</title>
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>UNO CARDS</title>
+
+
 </head>
 
 <body>
-    <div id="player-hand" class="hand"></div>
-    <div id="console-hand" class="hand"></div>
 
-    <button id="play-card-btn">Jugar Carta</button>
-    <input type="text" id="response-input">
-    <button id="response-btn">Responder</button>
+    <div class="player-2">
+        <div class="card">
+            <div class="logo"></div>
+        </div>
+        <div class="light"></div>
+    </div>
+    <div class="player-3">
+        <div class="light"></div>
+        <div class="card">
+            <div class="logo"></div>
+        </div>
+    </div>
+    <div class="player-4">
+        <div class="light"></div>
+        <div class="card">
+            <div class="logo"></div>
+        </div>
+    </div>
 
-    <script src="main.js"></script>
+    <div class="deck" id="deck" onclick="turnDeckCard(this)">
+        <!-- handle with JS -->
+    </div>
+
+    <div class="table" id="table">
+        <ion-icon name="refresh-outline"></ion-icon>
+    </div>
+
+    <div class="table-card" id="tableCard">
+        <!-- updated with JS -->
+    </div>
+
+    <div class="cards-container" id="cardsContainer">
+        <!-- filled with JS -->
+    </div>
+
+    <div class="choose-color-window hide">
+        <div class="colors-container">
+            <div class="red color"></div>
+            <div class="yellow color"></div>
+            <div class="green color"></div>
+            <div class="blue color"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
 </body>
 
 </html>
