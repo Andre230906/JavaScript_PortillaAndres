@@ -1,0 +1,25 @@
+[{
+        "heroName": "Superman",
+        "heroAge": "35",
+        "power": "Volar, super fuerza, visión de rayos X",
+        "actorName": "Henry Cavill",
+        "location": "Metropolis",
+        "date": "2023-05-03"
+    },
+    {
+        "heroName": "Batman",
+        "heroAge": "40",
+        "power": "Inteligencia, habilidades de combate, tecnología avanzada",
+        "actorName": "Christian Bale",
+        "location": "Gotham City",
+        "date": "2023-05-03"
+    },
+    {
+        "heroName": "Wonder Woman",
+        "heroAge": "3000",
+        "power": "Fuerza sobrehumana, habilidades de combate, lazos de la verdad",
+        "actorName": "Gal Gadot",
+        "location": "Themyscira",
+        "date": "2023-05-03"
+    }
+]
