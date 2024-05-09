@@ -1,5 +1,5 @@
 .card-client {
-    flex-direction: row-reverse;
+    z-index: 1;
     background: #2cb5a0;
     width: 13rem;
     padding-top: 25px;
@@ -20,6 +20,7 @@
 }
 
 .user-picture {
+    z-index: 10;
     overflow: hidden;
     object-fit: cover;
     width: 5rem;
@@ -125,6 +126,7 @@
     padding: 25px 25px;
     gap: 20px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+    z-index: 5;
 }
 
 
@@ -163,6 +165,13 @@
 .containerThree:hover {
     background-color: #0072b1;
     transition-duration: .3s;
+}
+
+.black {
+    background-color: black;
+    height: 150px;
+    background-position: -1;
+    z-index: -1;
 }
 
 

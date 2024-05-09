@@ -1,0 +1,170 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f9f9f9;
+    margin: 0;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+p {
+    color: #999;
+    font-size: 1vw;
+    margin: 5px;
+}
+
+h3 {
+    color: #2c2e31;
+    font-family: sans-serif;
+    font-size: 1.5vw;
+    margin: 0;
+}
+
+.fondo {
+    background-color: rgb(48, 48, 48);
+    width: 100vw;
+    height: 52vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+    z-index: -1;
+}
+
+.mini {
+    z-index: 1;
+    width: 40vw;
+    height: 15vh;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid rgb(209, 209, 209);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.super {
+    width: 40vw;
+    height: 50vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.hoal {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#foti {
+    border-radius: 100px;
+    margin: 2vw;
+    border: 1px solid rgb(209, 209, 209);
+    padding: 5px;
+    background-color: white;
+}
+
+.options {
+    padding: 15px 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+    text-align: center;
+    z-index: 5;
+}
+
+.values_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: left;
+}
+
+.horizontal_center {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.values_list li {
+    cursor: pointer;
+    display: block;
+    width: 40px;
+    height: 48px;
+    float: left;
+    margin: 20px;
+    background-image: url('https://randomuser.me/img/card_icons.png');
+    background-size: 378px;
+    background-position-y: -48px;
+    transition: all .25s ease-out;
+}
+
+.infoDisplay {
+    position: absolute;
+    top: 50vh;
+}
+
+.values_list li:before {
+    content: attr(data-label);
+    opacity: 0;
+}
+
+.values_list li[data-label=name] {
+    background-position: 0 -48px;
+}
+
+.values_list li.active[data-label=name] {
+    background-position: 0 -96px;
+}
+
+.values_list li[data-label=address] {
+    background-position: -203px -48px;
+}
+
+.values_list li.active[data-label=address] {
+    background-position: -203px -96px;
+}
+
+.values_list li[data-label=birthday] {
+    background-position: -135px -48px;
+}
+
+.values_list li.active[data-label=birthday] {
+    background-position: -135px -96px;
+}
+
+.values_list li[data-label=email] {
+    background-position: -68px -48px;
+}
+
+.values_list li.active[data-label=email] {
+    background-position: -68px -96px;
+}
+
+.values_list li[data-label=phone] {
+    background-position: -270px -48px;
+}
+
+.values_list li.active[data-label=phone] {
+    background-position: -270px -96px;
+}
+
+.values_list li[data-label=password] {
+    background-position: -338px -48px;
+}
+
+.values_list li.active[data-label=password] {
+    background-position: -338px -96px;
+}
