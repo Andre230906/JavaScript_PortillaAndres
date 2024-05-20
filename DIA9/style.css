@@ -1,0 +1,79 @@
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/user.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/smartphone-shake.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/block.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/voicemail-r.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/flag.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/calendar-dates.css');
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(212, 239, 214);
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.datos {
+    display: none;
+    font-size: 1em;
+    color: #333;
+    /* Color de texto más oscuro */
+}
+
+h2 {
+    font-style: italic;
+    color: gray;
+    display: none;
+}
+
+#nombre {
+    font-size: 2.5em;
+    /* Tamaño de fuente aumentado */
+    color: #333;
+    /* Color de texto más oscuro */
+}
+
+.container {
+    width: 80%;
+    /* Ajuste del ancho del contenedor */
+    max-width: 600px;
+    /* Tamaño máximo del contenedor */
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 5em;
+    /* Aumento del espacio en la parte superior */
+    padding: 2em;
+    border-radius: 15px;
+    /* Bordes más redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+}
+
+#foto {
+    width: 12em;
+    /* Aumento del tamaño de la imagen */
+    border-radius: 50%;
+    /* Forma de círculo para la imagen */
+    border: 5px solid rgb(212, 239, 214);
+    /* Borde más grueso y color de fondo */
+}
+
+.iconos {
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-around;
+    /* Distribución uniforme de los íconos */
+}
+
+#infoHover {
+    font-size: 1.3em;
+    /* Tamaño de fuente ajustado */
+    color: #555;
+    /* Color de texto más oscuro */
+    margin-top: 1em;
+    /* Espacio superior adicional */
+}

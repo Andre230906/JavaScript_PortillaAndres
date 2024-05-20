@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starwars</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Starwars</h1>
+
+    <label for="charId">Ingresa el ID del personaje que deseas buscar:</label><br><br>
+    <input type="number" id="charId" min="1" max="731" value="1"><br>
+    <button onclick="fetchCharacter()">Buscar Personaje</button>
+
+    <div id="characterInfo"></div>
+    <div id="planetInfo"></div>
+    <div id="speciesInfo"></div>
+    <div id="vehicleInfo"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
